@@ -1,1 +1,22 @@
-[]
+[
+    {
+        "nome": "espada longa",
+        "tipo": "armas",
+        "quantidade": 4
+    },
+    {
+        "nome": "adaga",
+        "tipo": "armas",
+        "quantidade": 5
+    },
+    {
+        "nome": "corda",
+        "tipo": "utilidades",
+        "quantidade": 6
+    },
+    {
+        "nome": "moedas de ouro",
+        "tipo": "utilidades",
+        "quantidade": 10
+    }
+]
