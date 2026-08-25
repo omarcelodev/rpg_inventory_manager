@@ -1,74 +1,95 @@
-# RPG Adventure Inventory Manager
+# RPG Inventory Manager
 
-A terminal-based inventory management system for a text RPG, built in Python, allowing players to manage items with categories, quantities, and persistent storage.
+A terminal-based inventory management system for a text RPG, built with Python. It allows players to manage items, quantities, and categories with persistent storage using JSON.
 
-## 📜 Description
+This project was developed as a learning challenge to practice core Python concepts such as data structures, functions, control flow, input validation, file handling, and modular programming.
 
-This project simulates an RPG inventory system where each item has a **name**, **type**, and **quantity**.  
-The system prevents duplicate items, validates user input, and saves inventory data between executions using JSON.
+## Features
 
-It was developed as a final challenge to practice core Python concepts such as data structures, functions, control flow, file handling, and modular logic.
+* Add items with a specified quantity
+* Automatically categorize items based on predefined game data
+* Increase the quantity when an item already exists in the inventory
+* Remove items partially or completely
+* Validate quantities and user input
+* Enforce a maximum quantity per item
+* Browse available game items by category
+* Display a complete inventory summary
+* Save and load inventory data using JSON
+* Interactive terminal menu
 
-## ⚙️ Features
+## Inventory Rules
 
-- Add items to the inventory with quantity selection
-- Automatically categorizes items based on predefined game data
-- Prevents duplicate items (adds quantity instead)
-- Remove items partially or completely
-- Validate user input (no zero or negative quantities)
-- Inventory capacity limit per item
-- View available game items by category
-- Display a full inventory summary
-- Persistent storage using JSON (save & load inventory)
-- Interactive terminal menu
+* Items are uniquely identified by name.
+* Each item belongs to a predefined category.
+* Each item has a maximum allowed quantity.
+* Adding an existing item increases its current quantity.
+* Removing the entire available quantity deletes the item from the inventory.
+* Invalid quantities, such as zero or negative values, are rejected.
 
-## 🧱 Inventory Rules
+## Project Structure
 
-- Items are uniquely identified by name
-- Each item belongs to a predefined category
-- Maximum quantity per item is limited
-- Removing more items than available deletes the item from inventory
+The application is organized around:
 
-## 🗂️ Project Structure
+* `itens` — predefined game items grouped by category;
+* `inventario` — the player's current inventory, represented as a list of dictionaries;
+* dedicated functions for inventory operations;
+* `inventario.json` — persistent inventory data created and loaded between executions.
 
-- `itens`: predefined game items grouped by category
-- `inventario`: dynamic player inventory stored as a list of dictionaries
-- Modular functions for each inventory operation
-- JSON file used to persist inventory data between runs
+## Technologies
 
-## ▶️ How to Run
+* Python 3
+* Python standard library:
 
-1. Make sure you have **Python 3.x** installed
-2. Clone the repository
-3. Run the main file:
+  * `json`
+  * `os`
+
+No external dependencies are required.
+
+## Getting Started
+
+### Prerequisites
+
+* Python 3.x
+
+### Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/omarcelodev/rpg-inventory-manager.git
+cd rpg-inventory-manager
+```
+
+### Running the Application
 
 ```bash
 python main.py
 ```
-The inventory will automatically load from inventario.json if it exists.
 
-## 💾 Technologies Used
+If `inventario.json` already exists, the application automatically loads the previously saved inventory.
 
-- Python 3
+## Possible Improvements
 
-- Standard libraries:
-  - json
-  - os
+* [ ] Search inventory by item name
+* [ ] Edit item quantities directly
+* [ ] Add item descriptions and rarity levels
+* [ ] Add automated tests
+* [ ] Improve input validation and exception handling
+* [ ] Refactor the application using object-oriented programming
 
-## 🚀 Possible Improvements
+## What I Learned
 
-- Search inventory by item name
+This project was created to practice fundamental Python concepts through a small but complete terminal application, including:
 
-- Edit item quantities directly
+* data structures;
+* functions and control flow;
+* input validation;
+* JSON serialization and persistence;
+* file handling;
+* separation of application logic into reusable functions.
 
-- Add item descriptions and rarity levels
+## License
 
-- Unit tests
+This project is licensed under the [MIT License](LICENSE).
 
-- Refactor input handling with exception control
-
-- Convert to OOP structure
-
-## 📌 Author
-
-Developed by **Marcelo** as a Python learning challenge and portfolio project.
+© 2026 Marcelo Gomes
