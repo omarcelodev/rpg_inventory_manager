@@ -92,4 +92,4 @@ This project was created to practice fundamental Python concepts through a small
 
 This project is licensed under the [MIT License](LICENSE).
 
-© 2026 Marcelo Gomes
+© 2025 Marcelo Gomes
